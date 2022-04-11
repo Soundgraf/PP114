@@ -30,10 +30,6 @@ public class Util {
             properties.put(Environment.PASS, PASSWORD);
             properties.put(Environment.DIALECT, DIALECT);
 
-//            properties.put(Environment.SHOW_SQL, "true");
-//            properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-//            properties.put(Environment.HBM2DDL_AUTO,"create-drop");
-
             Configuration configuration = new Configuration()
                     .setProperties(properties)
                     .addAnnotatedClass(User.class);

@@ -16,7 +16,6 @@ public class UserDaoHibernateImpl implements UserDao {
 
     }
 
-
     @Override
     public void createUsersTable() {
         Session session = sessionFactory.openSession();
@@ -62,7 +61,7 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         List<User> list = new ArrayList<>();
-        list = session.createQuery("FROM User ").list();
+        list = session.createQuery("FROM User").list();
         transaction.commit();
         return list;
     }
@@ -71,7 +70,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void cleanUsersTable() {
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.createSQLQuery("TRUNCATE TABLE User ").executeUpdate();
+        session.createSQLQuery("TRUNCATE TABLE User").executeUpdate();
         transaction.commit();
     }
 }
