@@ -19,9 +19,9 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "rootroot";
     private static final String DIALECT = "org.hibernate.dialect.MySQL5Dialect";
+    private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
-        SessionFactory sessionFactory = null;
         try {
             Properties properties = new Properties();
             properties.put(Environment.DRIVER, DRIVER);
